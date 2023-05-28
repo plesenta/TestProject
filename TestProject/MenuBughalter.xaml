@@ -1,0 +1,52 @@
+﻿<Window x:Class="TestProject.MenuBughalter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestProject"
+        mc:Ignorable="d"
+       Title="Товары" Height="450" Width="700" Icon="C:\Users\natal\Downloads\2 задания\2 задания\2 задание (маленькое с прошлого ДЭ)\Вариант 5\Общие ресурсы\icon.ico">
+    <Grid>
+        <Label Content="Товары" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"></Label>
+        <Label Name="UserNames" HorizontalAlignment="Left" VerticalAlignment="Top" Content="User" FontFamily="Times New Roman" FontSize="16" Margin="10,5,0,0" Width="97"/>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Margin="10,29" Source="C:\Users\natal\Downloads\2 задания\2 задания\2 задание (маленькое с прошлого ДЭ)\Вариант 5\Общие ресурсы\logo.png"></Image>
+        <Button Content="Вернуться" HorizontalAlignment="Left" Margin="564,10,0,0" VerticalAlignment="Top" Width="94" Background="#FFBF2525" BorderBrush="#FFB92121" Foreground="White" FontFamily="Times New Roman" FontSize="16" Click="Button_Click_1"/>
+        <Button Content="Заказы" HorizontalAlignment="Left" Margin="564,43,0,0" VerticalAlignment="Top" Width="94" Background="#FFBF2525" BorderBrush="#FFB92121" Foreground="White" FontFamily="Times New Roman" FontSize="16" Click="Button_Click"/>
+        <ScrollViewer Margin="0,135,0,0" VerticalScrollBarVisibility="Hidden">
+            <StackPanel Orientation="Horizontal" Height="274">
+                <ListView Name="ListTovar" Background="Transparent" BorderBrush="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ListViewItem BorderBrush="Black" Background="White" Width="650">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:Name="StringImage" Visibility="Hidden" Text="{Binding Photo, StringFormat=../Test/{0}}"></TextBlock>
+                                    <Image Source="{Binding Text, ElementName=StringImage}" Width="150" HorizontalAlignment="Left" Margin="5"/>
+                                    <StackPanel Orientation="Vertical" Margin="20 30" Width="400">
+                                        <TextBlock Text="{Binding Name}" Name="ProductName"></TextBlock>
+                                        <TextBlock Text="{Binding Articul}" Name="ArticulName"></TextBlock>
+                                        <TextBlock Text="{Binding Description}" Name="Descrip" TextWrapping="Wrap"></TextBlock>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Производитель: "></TextBlock>
+                                            <TextBlock Text="{Binding Manufacturer}" Name="ManufacturProduct"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Цена: "></TextBlock>
+                                            <TextBlock Text="{Binding Cost}" Name="CostProduct"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Количество: "></TextBlock>
+                                            <TextBlock Text="{Binding QuantityInStock}" Name="Kolvo"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                             <TextBlock Text="{Binding ID_Product}" Visibility="Hidden" Name="TovarID"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ListViewItem>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

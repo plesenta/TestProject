@@ -1,0 +1,33 @@
+﻿<Window x:Class="TestProject.Order"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestProject"
+        mc:Ignorable="d"
+        Title="Заказ" Height="450" Width="800" Icon="C:\Users\natal\Downloads\2 задания\2 задания\2 задание (маленькое с прошлого ДЭ)\Вариант 5\Общие ресурсы\icon.ico">
+    <Grid>
+        <Label  FontFamily="Times New Roman" Content="" Name="Tovar" Width="600" Height="70" Margin="139,62,53,285"/>
+        <TextBlock HorizontalAlignment="Left" Margin="375,10,0,0" TextWrapping="Wrap" Text="Заказ" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
+        <Label FontFamily="Times New Roman" Name="data_deliv" Content="" HorizontalAlignment="Left" Margin="139,139,0,0" VerticalAlignment="Top" Width="129"/>
+
+        <Label FontFamily="Times New Roman" Name="data_order" Content="" HorizontalAlignment="Left" Margin="139,170,0,0" VerticalAlignment="Top" Width="129"/>
+        <Label FontFamily="Times New Roman" Name="Kod" Content="" HorizontalAlignment="Left" Margin="139,201,0,0" VerticalAlignment="Top" Width="129"/>
+
+        <Label FontFamily="Times New Roman" Name="status" HorizontalAlignment="Left" Margin="139,232,0,0" VerticalAlignment="Top" Width="129" Height="26"/>
+        <ComboBox Name="PickPoint" HorizontalAlignment="Left" Margin="139,267,0,0" VerticalAlignment="Top" Width="129"/>
+        <Label FontFamily="Times New Roman" Content="Пункт выдачи: " HorizontalAlignment="Left" Margin="39,263,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button Content="Удалить все" HorizontalAlignment="Left" Margin="232,340,0,0" VerticalAlignment="Top" Width="113" Height="34" Background="#FFB81E1E" BorderBrush="#FFAE1A1A" Foreground="White" FontFamily="Times New Roman" FontSize="16" Click="Button_Click"/>
+        <Button Content="Подтвердить" HorizontalAlignment="Left" Margin="353,340,0,0" VerticalAlignment="Top" Width="113" Height="34" Background="#FFB81E1E" BorderBrush="#FFAE1A1A" Foreground="White" FontFamily="Times New Roman" FontSize="16" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" FontFamily="Times New Roman" Margin="81,236,0,0" TextWrapping="Wrap" Text="Статус: " VerticalAlignment="Top" Height="20" Width="47"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41,205,0,0" TextWrapping="Wrap" FontFamily="Times New Roman" Text="Код получения:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="59,174,0,0" TextWrapping="Wrap" FontFamily="Times New Roman" Text="Дата заказа:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,144,0,0" TextWrapping="Wrap" Text="Дата доставки: " FontFamily="Times New Roman" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="81,84,0,0" TextWrapping="Wrap" FontFamily="Times New Roman" Text="Товары: " VerticalAlignment="Top"/>
+        <Button Content="Сохранить талон" HorizontalAlignment="Left" Margin="471,340,0,0" VerticalAlignment="Top" Width="131" Height="34" Background="#FFB81E1E" BorderBrush="#FFAE1A1A" Foreground="White" FontFamily="Times New Roman" FontSize="16" Click="Button_Click_2"/>
+        <Label Content="Итоговая сумма: " HorizontalAlignment="Left" Margin="529,267,0,0" FontFamily="Times New Roman" VerticalAlignment="Top"/>
+        <Label Name="CostItog" Content="" Width="80" HorizontalAlignment="Left" Margin="632,267,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>
